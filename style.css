@@ -13,23 +13,24 @@ body {
   font-weight: 300;
 }
 #header {
-  background: url(images/background.jpeg);
+  background: url(images/background.jpeg) no-repeat center center;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 150vh;
 }
+
 .navbar-brand img {
   width: 6rem;
   height: 6rem;
 }
 .navbar-brand {
   font-size: 2rem !important;
-  color: #1d5ba7 !important;
+  color: #1a4e8d !important;
 }
 .nav-link {
   font-size: 1.6rem;
   font-weight: 200;
-  color: #1d5ba7 !important;
+  color: #1a4e8d !important;
   margin-right: 1.5rem;
   justify-content: center;
   border-radius: 10rem;
@@ -42,9 +43,42 @@ body {
   margin-right: 8px;
 }
 .nav-link-btn:hover {
-  background-color: #1d5ba7;
+  background-color: #1a4e8d;
   color: white !important;
 }
 .login-btn-text:hover {
   opacity: 0.5;
+}
+.header-text {
+  padding: 2rem 5rem;
+  z-index: 1;
+}
+.header-text h1 {
+  font-size: 9rem;
+  line-height: 9rem;
+  word-spacing: 1.5rem;
+  font-weight: 600;
+  color: #1a4e8d;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+}
+.header-text p {
+  font-size: 3rem;
+  color: #1a4e8d;
+}
+
+@media only screen and (max-width: 576px) {
+  #header {
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .header-text h1 {
+    font-size: 5rem;
+    line-height: 6rem;
+    word-spacing: 1.5rem;
+  }
+  .header-text p {
+    font-size: 2rem;
+  }
 }
