@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 html {
   font-size: 62.5%;
@@ -28,23 +28,28 @@ body {
   color: #1a4e8d !important;
 }
 .nav-link {
+  display: flex;
   font-size: 1.6rem;
   font-weight: 200;
   color: #1a4e8d !important;
   margin-right: 1.5rem;
   justify-content: center;
   border-radius: 10rem;
-  padding: 0.5rem 2rem !important;
+  padding: 0.5rem 5rem !important;
   transition: all 0.3s;
   width: 7rem;
   text-align: center;
 }
+
 .login-btn span i {
   margin-right: 8px;
 }
 .nav-link-btn:hover {
   background-color: #1a4e8d;
   color: white !important;
+}
+.login-btn-text {
+  white-space: nowrap;
 }
 .login-btn-text:hover {
   opacity: 0.5;
@@ -93,7 +98,7 @@ body {
 /* about */
 
 #about {
-  padding: 3rem 10% 2rem;
+  padding: 3rem 7% 2rem;
   justify-content: center;
   text-align: center;
   align-items: center;
