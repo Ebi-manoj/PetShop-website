@@ -90,3 +90,16 @@ body {
     font-size: 2rem;
   }
 }
+/* about */
+
+#about {
+  padding: 3rem 10% 2rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.about-title {
+  font-size: 6rem;
+  font-weight: 600;
+  color: #1a4e8d;
+}
