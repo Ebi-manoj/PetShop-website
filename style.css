@@ -51,7 +51,6 @@ body {
 }
 .header-text {
   padding: 2rem 5rem;
-  z-index: 1;
 }
 .header-text h1 {
   font-size: 9rem;
