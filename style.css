@@ -135,6 +135,59 @@ body {
   transform: scale(1.2);
 }
 
+/* ......about........ */
+
+#about {
+  padding: 2rem 6% 10rem;
+  justify-content: center;
+  align-items: center;
+  background: #82c7d6;
+}
+#about h1 {
+  margin: 7rem 0;
+  font-size: 7rem;
+  text-align: center;
+  color: #1a4e8d;
+  font-weight: 600;
+  word-spacing: 1.6rem;
+}
+.about-box {
+  padding: 3rem 3rem 1rem;
+  background: white;
+  border-radius: 1.2rem;
+  width: 32rem;
+  transition: all 0.5s ease;
+}
+.about-box img {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 4rem;
+}
+.abt-para-box {
+  padding: 1rem 2rem;
+}
+.about-para {
+  font-size: 1.9rem;
+  font-weight: 100;
+  color: #0c3c68;
+  margin-bottom: 7rem;
+}
+.abt-row .col-md-4:nth-child(2) {
+  margin-top: 10rem;
+}
+.about-owner {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #102b4b;
+}
+.about-box:hover {
+  transform: translateY(-3.6rem);
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.527),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ...................................media query................................ */
+
 @media only screen and (max-width: 576px) {
   #header {
     background-size: cover;
@@ -152,9 +205,9 @@ body {
   .header-text p {
     font-size: 2rem;
   }
-  /* about */
+  /* Service */
 
-  .about-title {
+  .service-title {
     font-size: 3rem;
   }
   .service {
@@ -169,4 +222,16 @@ body {
   .services p {
     margin-top: 1.4rem;
   }
+}
+
+/* ...................about................ */
+#about h1 {
+  font-size: 3rem;
+  word-spacing: 1rem;
+}
+.abt-row .col-md-4:nth-child(2) {
+  margin-top: 0;
+}
+.about-box:hover {
+  transform: translateY(0);
 }
