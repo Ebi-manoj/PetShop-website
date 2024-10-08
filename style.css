@@ -79,13 +79,13 @@ body {
 
 /* about */
 
-#about {
+#service {
   padding: 3rem 15% 2rem;
   justify-content: center;
   text-align: center;
   align-items: center;
 }
-.about-title {
+.service-title {
   font-size: 6rem;
   font-weight: 600;
   color: #1a4e8d;
@@ -107,7 +107,7 @@ body {
 .services p {
   font-size: 1.8rem;
 }
-.about-btn {
+.service-btn {
   outline: 0;
   border: 0;
   background: #1558ab;
@@ -118,14 +118,20 @@ body {
   margin: 3rem 0;
   transition: all 0.3s;
 }
-.about-btn:hover {
+.service-btn:hover {
   background: #102b4b;
 }
-.about-img {
+.col-md-3 {
+  position: relative;
+  overflow: hidden;
   border-radius: 1rem;
-  transition: all 0.7s;
+  margin-bottom: 2rem;
 }
-.about-img:hover {
+.service-img {
+  border-radius: 1rem;
+  transition: all 0.7s ease;
+}
+.service-img:hover {
   transform: scale(1.2);
 }
 
