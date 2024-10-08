@@ -80,7 +80,7 @@ body {
 /* about */
 
 #about {
-  padding: 3rem 7% 2rem;
+  padding: 3rem 15% 2rem;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -115,11 +115,18 @@ body {
   padding: 1.4rem 3rem;
   border-radius: 10rem;
   font-size: 1.6rem;
-  margin-top: 3rem;
+  margin: 3rem 0;
   transition: all 0.3s;
 }
 .about-btn:hover {
   background: #102b4b;
+}
+.about-img {
+  border-radius: 1rem;
+  transition: all 0.7s;
+}
+.about-img:hover {
+  transform: scale(1.2);
 }
 
 @media only screen and (max-width: 576px) {
