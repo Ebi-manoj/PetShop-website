@@ -188,6 +188,38 @@ body {
   }
 }
 
+/* .....................slider section.............. */
+
+#slider {
+  background: #0c3c68;
+  padding: 10rem 2rem 7rem;
+}
+#slider h1 {
+  text-align: center;
+  font-size: 6rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 5rem;
+}
+.slider-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+.btn-slide-section {
+  background: #fff;
+  color: #102b4b;
+  outline: 0;
+  border: 0;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  border-radius: 7rem;
+  transition: all 0.8s ease;
+}
+.btn-slide-section:hover {
+  background: #87bcfc;
+}
 /* ...................................media query................................ */
 
 @media only screen and (max-width: 576px) {
