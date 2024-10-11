@@ -265,6 +265,40 @@ body {
   right: 10px;
 }
 
+/* .....................contact..................... */
+
+#contact {
+  background-color: #fff;
+  padding: 3rem 5%;
+}
+#contact .row {
+  border-bottom: 1px solid #102b4b;
+}
+.contact-info {
+  color: #102b4b;
+  margin-bottom: 0 !important;
+  max-height: 18rem !important;
+}
+.contact-info h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.contact-info p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.contact-info a {
+  text-decoration: none;
+  color: #102b4b;
+}
+.copy-right {
+  font-size: 1rem;
+  color: black;
+  text-align: center;
+  margin-top: 2rem;
+}
 /* ...................................media query................................ */
 
 @media only screen and (max-width: 576px) {
@@ -355,5 +389,11 @@ body {
 
   .slider__btn--right {
     right: 10px;
+  }
+  #slider h1 {
+    font-size: 3.6rem;
+  }
+  .slider-box {
+    margin-bottom: 0;
   }
 }
