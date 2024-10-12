@@ -299,6 +299,80 @@ body {
   text-align: center;
   margin-top: 2rem;
 }
+/* .....................modal.............. */
+.window {
+  max-width: 60rem;
+  padding: 5rem 10rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgb(245, 247, 255);
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+}
+.window-header {
+  font-size: 3rem;
+  color: #102b4b;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 3.4rem;
+}
+.window-form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+.window-form label {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.window-form input {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: 0.5px solid rgb(220, 227, 255);
+  border-radius: 5px;
+}
+.btn-close-modal {
+  position: absolute;
+  top: 0.6rem;
+  right: 2rem;
+  border: none;
+  background: none;
+  font-size: 3rem;
+}
+.window-form button {
+  grid-column: 1 / span 2;
+  justify-self: center;
+  margin-top: 1rem;
+  background: #0c3c68;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 10rem;
+  padding: 0.6rem 2rem;
+  font-size: 1.6rem;
+  transition: all 0.3s;
+}
+.window-form button:hover {
+  background-color: #1558ab;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+.hidden {
+  display: none;
+}
 /* ...................................media query................................ */
 
 @media only screen and (max-width: 576px) {
