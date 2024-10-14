@@ -48,3 +48,46 @@ const headerObserver = new IntersectionObserver(sticky, {
 });
 
 headerObserver.observe(header);
+
+// reveal section slowly
+
+const allSections = document.querySelectorAll('.section');
+
+const reveal = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove('section-hidden');
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(reveal, {
+  root: null,
+  threshold: 0.18,
+});
+
+allSections.forEach(function (sec) {
+  sectionObserver.observe(sec);
+  sec.classList.add('section-hidden');
+});
+
+// lazy image loading....
+
+const images = document.querySelectorAll('img[data-src]');
+const loadImg = function (entries, observer) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.src = entry.target.dataset.src;
+    entry.target.addEventListener('load', function () {
+      entry.target.classList.remove('lazy-img');
+    });
+    observer.unobserve(entry.target);
+  });
+};
+
+const imageObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+  rootMargin: `${200}px`,
+});
+
+images.forEach(img => imageObserver.observe(img));
