@@ -96,16 +96,25 @@ images.forEach(img => imageObserver.observe(img));
 
 const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
+const sliderContainer = document.querySelector('#slides');
 const slides = document.querySelectorAll('.slide');
-const slideWidth = slides[0].getBoundingClientRect().width;
-const visibleSlide = 5;
-const maxSlide = slides.length - visibleSlide;
+let slideWidth = slides[0].getBoundingClientRect().width;
+let visibleSlide = window.innerWidth <= 768 ? 1 : 5;
+let maxSlide = slides.length - visibleSlide;
 
 let curSlide = 0;
 
+const updateSlider = function () {
+  slideWidth = slides[0].getBoundingClientRect().width;
+  visibleSlide = window.innerWidth <= 768 ? 1 : 5;
+  maxSlide = slides.length - visibleSlide;
+  goToSlide(curSlide);
+};
+
 const goToSlide = function (slideNo) {
-  slides.forEach((s, i) => {
-    s.style.transform = `translateX(${i - slideNo * slideWidth}px)`;
+  const translateXValue = slideNo * slideWidth;
+  slides.forEach(s => {
+    s.style.transform = `translateX(-${translateXValue}px)`;
   });
 };
 
@@ -127,3 +136,26 @@ const prevSlide = function () {
 };
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', prevSlide);
+
+window.addEventListener('resize', updateSlider);
+
+// setting arrow key functionality
+let isVisible = false;
+
+document.addEventListener('keydown', function (e) {
+  if (!isVisible) return;
+  e.key === 'ArrowRight' && nextSlide();
+  e.key === 'ArrowLeft' && prevSlide();
+});
+
+const slideVisible = function (entries) {
+  const [entry] = entries;
+  isVisible = entry.isIntersecting;
+};
+
+const sliderObserver = new IntersectionObserver(slideVisible, {
+  root: null,
+  threshold: 0.1,
+});
+
+sliderObserver.observe(sliderContainer);

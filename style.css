@@ -230,15 +230,13 @@ body {
 
 #slides {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: calc(20% * 5);
 }
 
 .slide {
-  transition: transform 0.5s ease-in-out;
   min-width: 20%;
   box-sizing: border-box;
   padding: 20px;
+  transition: transform 0.5s ease-in-out;
 }
 
 #slides img {
@@ -257,6 +255,7 @@ body {
   padding: 10px;
   cursor: pointer;
   z-index: 1;
+  transition: all 0.5s;
 }
 
 .slider__btn--left {
@@ -265,6 +264,12 @@ body {
 
 .slider__btn--right {
   right: 10px;
+}
+.slider__btn--right:active {
+  transform: translate(10px, -50%);
+}
+.slider__btn--left:active {
+  transform: translate(-10px, -50%);
 }
 
 /* .....................contact..................... */
@@ -451,29 +456,9 @@ img {
   }
 
   /* .........................slider...................... */
-  #slide-container {
-    position: relative;
-    max-width: 100%;
-  }
-  #slides {
-    max-width: 100rem;
-    height: 50rem;
-    margin: 0 auto;
-    position: relative;
-    overflow-x: hidden;
-  }
 
   .slide {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 50rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: transform 1s;
+    min-width: 100%;
   }
 
   /* Navigation Buttons */
